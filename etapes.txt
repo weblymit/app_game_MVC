@@ -1,0 +1,9 @@
+1- Je me connecte à mysql avec xamp
+2- Je crée un BDD 
+3- Je crée ma table 
+4- Je crée mes colonnes (champs) => id en auto-incremente
+5- j'insere 1 ou 2 entrée
+6- Je crée mon projet PHP & publie sur GITHUB
+7- Je code mon templates
+8- Je me connecte à ma BDD => PDO
+9- On recupere les donnés de la BDD avec SELECT * FROM mytable

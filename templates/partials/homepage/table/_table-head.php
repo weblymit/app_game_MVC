@@ -1,0 +1,12 @@
+<thead>
+  <tr>
+    <th>#</th>
+    <th>Nom</th>
+    <th>Genre</th>
+    <th>Plateforme</th>
+    <th>Prix</th>
+    <th>PEGI</th>
+    <th>Voir</th>
+    <th>Supprimer</th>
+  </tr>
+</thead>
