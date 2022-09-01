@@ -1,7 +1,7 @@
 <?php $title = "Update"; // title for current page 
-$error = [];
-$errorMessage = "<span class='text-red-500'>*Ce champs est obligatoire</span>";
-debug_array($error);
+// $error = [];
+// $errorMessage = "<span class='text-red-500'>*Ce champs est obligatoire</span>";
+// debug_array($error);
 
 ob_start()
 ?>

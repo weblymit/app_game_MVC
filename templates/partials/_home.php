@@ -13,7 +13,18 @@
     <div class="overflow-x-auto mt-16">
       <table class="table w-full">
         <!-- head -->
-        <?php include("table/_table-head.php") ?>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Genre</th>
+            <th>Plateforme</th>
+            <th>Prix</th>
+            <th>PEGI</th>
+            <th>Voir</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
         <tbody>
           <?php
           $index = 1;
@@ -21,9 +32,13 @@
             echo "<tr><td class=text-center>Aucun jeux disponible actuellement</td></tr>";
           } else { ?>
             <?php foreach ($games as $game) : ?>
-              <tr>
+              <tr class="hover:text-blue-400">
                 <th><?= $index++ ?></th>
-                <td><?= $game['name'] ?></td>
+                <td>
+                  <a href="game.php?id=<?= $game['id'] ?>&name=<?= $game['name'] ?>">
+                    <?= $game['name'] ?>
+                  </a>
+                </td>
                 <td><?= $game['genre'] ?></td>
                 <td><?= $game['plateforms'] ?></td>
                 <td><?= $game['price'] ?></td>

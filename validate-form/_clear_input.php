@@ -1,4 +1,5 @@
 <?php
+global $nom;
 $nom = clear_xss($_POST["name"]);
 $prix = clear_xss($_POST["price"]);
 $note = clear_xss($_POST["note"]);

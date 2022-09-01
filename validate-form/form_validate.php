@@ -1,21 +1,12 @@
 <?php
 // 2 faille xss
-include_once("_clear_input.php");
-// 3- validation de chaque input
-////////////////////////////////
-// name
-include_once("_name.php");
-//prix
-include_once("_price.php");
-//note
-include_once("_note.php");
-// description
-include_once("_description.php");
-//genre
-include_once("_genre.php");
-//plateforms
-include_once("_plateforms.php");
-// select pegi
+require_once("_clear_input.php");
+require_once("_name.php");
+require_once("_price.php");
+require_once("_note.php");
+require_once("_description.php");
+require_once("_genre.php");
+require_once("_plateforms.php");
 if (empty($pegi)) {
   $error["pegi"] = $errorMessage;
 }

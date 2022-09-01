@@ -1,5 +1,5 @@
 <?php
-function debug_array($arr)
+function debug_array(array $arr)
 {
   echo "<pre>";
   print_r($arr);
@@ -12,10 +12,17 @@ function clear_xss($var)
 }
 
 // function for clear array value
-function clear_xss_array($arrs)
+function clear_xss_array(array $arrs)
 {
    $assAR = [];
   foreach ($arrs as $arr) {
     $assAR[] = trim(htmlspecialchars($arr));
   }
+}
+
+function redirect(string $url): void
+{
+  $_SESSION["success"] = "Jeux ajouté avec succès";
+  header("Location: $url ");
+  die;
 }
