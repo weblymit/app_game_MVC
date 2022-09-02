@@ -5,7 +5,7 @@
  */
 $error = [];
 $errorMessage = "<span class='text-red-500'>*Ce champs est obligatoire</span>";
-require("src/model/game.php");
+require("src/models/game.php");
 /**
  * 2- Create
  */

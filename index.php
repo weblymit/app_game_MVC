@@ -4,7 +4,7 @@
  */
 // session_start();
 $title = "Accueil"; // title for current page 
-require("src/model/game.php");
+require("src/models/game.php");
 // require("utils/render_view.php");
 /**
  * 2- Récupération

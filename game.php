@@ -1,5 +1,5 @@
 <?php
-require("src/model/game.php");
+require("src/models/game.php");
 // on récupère id du jeux pour l'utiliser dans la requette
 // if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
 //   $id = clear_xss($_GET['id']);
