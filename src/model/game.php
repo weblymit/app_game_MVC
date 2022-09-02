@@ -28,7 +28,7 @@ function getPDO(): PDO
   }
 }
 
-function getAllGames()
+function getAllGames(): array
 {
   $pdo = getPDO();
   //1-  Query to get all games
@@ -57,7 +57,7 @@ function getAllGames()
   return $games;
 }
 
-function getGame($id)
+function getGame(int $id)
 {
   $pdo = getPDO();
   // 3- faire la query vers BDD
@@ -81,7 +81,7 @@ function getGame($id)
   return $game;
 }
 
-function updateGame($id, $error)
+function updateGame(int $id, array $error): void
 {
   require_once("validate-form/form_validate.php");
   // debug_array($error);
@@ -113,7 +113,7 @@ function updateGame($id, $error)
   }
 }
 
-function createGame($errorMessage, $error)
+function createGame(string $errorMessage, array $error): void
 {
   require_once("validate-form/form_validate.php");
   // debug_array($error);
@@ -142,24 +142,20 @@ function createGame($errorMessage, $error)
   }
 }
 
-function delete()
+function delete(): void
 {
   $pdo = getPDO();
-  // 2- Recupere id dans URL et je nettoie
+  //Recupere id dans URL et je nettoie
   $id = clear_xss($_GET["id"]);
-  // 3- requette vers BDD
   $sql = "DELETE FROM jeux WHERE id=?";
-  // 4- prepare ma query
   $query = $pdo->prepare($sql);
-  // 5- on execute la query
   $query->execute([$id]);
-
-  //6- redirection
+  //redirect
   $_SESSION["success"] = "Le jeu est bien supprimé !";
-  header("Location:index.php");
+  header("Location: index.php");
 }
 
-function getId()
+function getId(): int
 {
   if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = clear_xss($_GET['id']);
