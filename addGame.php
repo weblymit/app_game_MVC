@@ -5,13 +5,14 @@
  */
 $error = [];
 $errorMessage = "<span class='text-red-500'>*Ce champs est obligatoire</span>";
-require("src/models/game.php");
+require_once("src/models/Game.php");
+$model = new Game();
 /**
  * 2- Create
  */
 if (!empty($_POST["submited"])) {
   // require("validate-form/form_validate.php");
-  createGame($errorMessage,$error);
+  $model->create($errorMessage, $error);
 }
 // require_once("validate-form/form_validate.php");
 /**

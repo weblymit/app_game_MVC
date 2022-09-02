@@ -1,13 +1,8 @@
 <?php
-require("src/models/game.php");
-// on récupère id du jeux pour l'utiliser dans la requette
-// if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
-//   $id = clear_xss($_GET['id']);
-// } else {
-//   $_SESSION["error"] = "URL invalide!";
-//   header("Location: index.php");
-// }
-$id = getId();
-$game = getGame($id);
+require("src/game.php");
+require_once("src/models/Game.php");
+$model = new Game();
+$id = $model->getId();
+$game = $model->get($id);
 
 require("templates/gamePage.php");
