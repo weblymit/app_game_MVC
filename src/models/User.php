@@ -1,6 +1,9 @@
 <?php
+require_once("src/models/Model.php");
 
-class User
+class User extends Model
 {
-  
+  protected $table = "users";
+
+
 }

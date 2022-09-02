@@ -2,59 +2,8 @@
 require_once("src/models/Model.php");
 class Game extends Model
 {
-  
-  /**
-   * Return list of games order by name
-   *
-   * @return array
-   */
-  public function getAll(): array
-  {
-    $sql = "SELECT * FROM jeux ORDER BY name";
-    $query = $this->pdo->prepare($sql);
-    $query->execute();
-    $games = $query->fetchAll();
-
-    return $games;
-  }
-
-  /**
-   * Return one game by id
-   * @param int $id
-   */
-
-  public function get(int $id)
-  {
-    $sql = "SELECT * FROM jeux WHERE id= :id";
-    $query = $this->pdo->prepare($sql);
-    $query->bindValue(':id', $id, PDO::PARAM_INT);
-    $query->execute();
-    $game = $query->fetch();
-
-    if (!$game) {
-      $_SESSION["error"] = "This game is not available !";
-      header("Location: index.php");
-    }
-
-    return $game;
-  }
-
-  /**
-   * Delete one game
-   *
-   * @return void
-   */
-  function delete(): void
-  {
-    //Recupere id dans URL et je nettoie
-    $id = clear_xss($_GET["id"]);
-    $sql = "DELETE FROM jeux WHERE id=?";
-    $query = $this->pdo->prepare($sql);
-    $query->execute([$id]);
-    //redirect
-    $_SESSION["success"] = "Le jeu est bien supprimé !";
-    header("Location: index.php");
-  }
+  protected $table = "jeux";
+ 
 
   /**
    * Update one game
@@ -128,20 +77,5 @@ class Game extends Model
       die;
     }
   }
-  /**
-   * Get the id of game
-   *
-   * @return integer
-   */
-  function getId(): int
-  {
-    if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
-      $id = clear_xss($_GET['id']);
-    } else {
-      $_SESSION["error"] = "URL invalide!";
-      header("Location: index.php");
-    }
-    // $game = getGame($id);
-    return $id;
-  }
+  
 }
