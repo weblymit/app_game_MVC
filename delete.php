@@ -1,6 +1,7 @@
 <?php
 // demarre session
 session_start();
-require_once("src/models/Game.php");
-$model = new Game();
-$game = $model->delete();
+require_once("controllers/Game.php");
+$controller = new \Controllers\Game();
+$controller->delete();
+

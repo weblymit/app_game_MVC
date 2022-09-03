@@ -1,12 +1,8 @@
 <?php
-$error = [];
-$errorMessage = "<span class='text-red-500'>*Ce champs est obligatoire</span>";
-require("src/game.php");
-// on récupère id du jeux pour l'utiliser dans la requette
-$id = getId();
-$game = getGame($id);
-if (!empty($_POST["submited"])) {
-  updateGame($id,$error);
-}
+/**
+ * This file sow update page
+ */
 
-require("templates/updatePage.php");
+ require_once("controllers/Game.php");
+ $controllers = new \Controllers\Game();
+ $controllers->update();

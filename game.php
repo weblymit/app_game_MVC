@@ -1,8 +1,5 @@
 <?php
 // require("src/game.php");
-require_once("src/models/Game.php");
-$model = new Game();
-$id = $model->getId();
-$game = $model->get($id);
-
-require("templates/gamePage.php");
+require_once('controllers/Game.php');
+$controller = new \Controllers\Game();
+$controller->show();

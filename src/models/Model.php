@@ -1,5 +1,10 @@
 <?php
-require_once("src/game.php");
+
+namespace Models;
+
+use PDO;
+
+require_once("src/database.php");
 
 abstract class Model
 {

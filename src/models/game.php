@@ -1,9 +1,15 @@
 <?php
+
+namespace Models;
+
+use PDO;
+
 require_once("src/models/Model.php");
+
 class Game extends Model
 {
   protected $table = "jeux";
- 
+
 
   /**
    * Update one game
@@ -77,5 +83,4 @@ class Game extends Model
       die;
     }
   }
-  
 }

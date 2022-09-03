@@ -2,12 +2,15 @@
   <!-- head content -->
   <div class="wrap__content-head text-center">
     <div class="">
+      <a href="index.php" class=" link mb-5">Voir Jeux</a>
+
       <h1 class="text-blue-500 text-5xl uppercase font-black"><a href="index.php">App game</a></h1>
       <p>L'app qui repertorie vos jeux</p>
       <!-- button for add game -->
       <div class="pt-4">
         <a href="addGame.php" class="btn btn-success text-gray-100">Nouveau jeux</a>
       </div>
+
     </div>
     <!-- table -->
     <div class="overflow-x-auto mt-16">

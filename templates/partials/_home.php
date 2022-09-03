@@ -2,6 +2,8 @@
   <!-- head content -->
   <div class="wrap__content-head text-center">
     <div class="">
+      <a href="user.php" class=" link mb-5">Voir les users</a>
+
       <h1 class="text-blue-500 text-5xl uppercase font-black"><a href="index.php">App game</a></h1>
       <p>L'app qui repertorie vos jeux</p>
       <!-- button for add game -->
@@ -45,7 +47,7 @@
                 <td><?= $game['PEGI'] ?></td>
                 <td>
                   <a href="game.php?id=<?= $game['id'] ?>&name=<?= $game['name'] ?>">
-                    <img src="img/loupe.png" alt="loupe" class="w-4">
+                    <img src="assets/img/loupe.png" alt="loupe" class="w-4">
                   </a>
                 </td>
                 <td>
