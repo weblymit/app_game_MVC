@@ -4,7 +4,7 @@ namespace Models;
 
 use PDO;
 
-require_once("src/models/Model.php");
+require_once("models/Model.php");
 
 class Game extends Model
 {
@@ -20,7 +20,7 @@ class Game extends Model
    */
   function update(int $id, array $error): void
   {
-    require_once("validate-form/form_validate.php");
+    require_once("utils/validate-form/form_validate.php");
     // debug_array($error);
 
     //4- if no error
@@ -58,7 +58,8 @@ class Game extends Model
    */
   function create(string $errorMessage, array $error): void
   {
-    require_once("validate-form/form_validate.php");
+    require_once("utils/validate-form/form_validate.php");
+
     // debug_array($error);
     //4- if no error
     if (count($error) == 0) {

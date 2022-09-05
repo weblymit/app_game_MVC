@@ -46,7 +46,7 @@
                   </a>
                 </td>
                 <td>
-                  <?php include("partials/_modal-delete.php") ?>
+                  <?php include("utils/partials/_modal-delete.php") ?>
                 </td>
               </tr>
             <?php endforeach ?>

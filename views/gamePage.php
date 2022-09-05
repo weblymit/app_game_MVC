@@ -18,9 +18,9 @@ ob_start()
       </a>
       <!-- <a href="delete.php?id=<?= $game["id"] ?>&name=<?= $game["name"] ?>" class="btn btn-error text-white">Supprimer jeux
       </a> -->
-      <?php include("partials/_modal-delete.php") ?>
+      <?php include("utils/partials/_modal-delete.php") ?>
     </div>
   </div>
 </div>
 <?php $content = ob_get_clean(); ?>
-<?php require('layout.php') ?>
+<?php require('layout/layout.php') ?>

@@ -2,7 +2,7 @@
 
 namespace Controllers;
 // interaction avec notre app
-require_once("src/models/Game.php");
+require_once("models/Game.php");
 require_once('Controller.php');
 
 
@@ -26,7 +26,7 @@ class Game extends Controller
     // $model = new \Models\Game();
     $games = $this->model->getAll("name");
     //  affichage
-    require("templates/homepage.php");
+    require("views/homepage.php");
   }
 
   /**
@@ -40,7 +40,7 @@ class Game extends Controller
     $game = $this->model->get($id);
     $title = $game["name"];
     //  affichage
-    require("templates/gamePage.php");
+    require("views/gamePage.php");
   }
 
   /**
@@ -64,18 +64,18 @@ class Game extends Controller
     // $model = new \Models\Game();
 
     if (!empty($_POST["submited"])) {
-      // require("validate-form/form_validate.php");
+      // require("utils/form_validate.php");
       $this->model->create($errorMessage, $error);
     }
 
-    require("templates/addPage.php");
+    require("views/addPage.php");
   }
 
   public function update()
   {
     $error = [];
     $errorMessage = "<span class='text-red-500'>*Ce champs est obligatoire</span>";
-    require_once("src/models/Game.php");
+    require_once("models/Game.php");
     // on récupère id du jeux pour l'utiliser dans la requette
     // $model = new \Models\Game();
     $id = $this->model->getId();
@@ -85,6 +85,6 @@ class Game extends Controller
       $this->model->update($id, $error);
     }
 
-    require("templates/updatePage.php");
+    require("views/updatePage.php");
   }
 }

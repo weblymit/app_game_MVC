@@ -1,5 +1,5 @@
 <?php
-require("helpers/functions.php");
+require("utils/functions.php");
 /**
  * Retourne une connexion a la BDD
  * @return PDO

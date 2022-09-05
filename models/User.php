@@ -2,11 +2,9 @@
 
 namespace Models;
 
-require_once("src/models/Model.php");
+require_once("models/Model.php");
 
 class User extends Model
 {
   protected $table = "users";
-
-
 }

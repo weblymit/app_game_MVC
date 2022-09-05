@@ -36,7 +36,7 @@ ob_start()
     </div>
     <!-- input for genre -->
     <?php
-    include_once("input/_input_update_genre.php");
+    include_once("utils/input/_input_update_genre.php");
     ?>
     <!-- input for note -->
     <div class="mb-3">
@@ -52,7 +52,7 @@ ob_start()
     </div>
     <!-- input for plateforms -->
     <?php
-    include_once("input/_input_update_plateforms.php");
+    include_once("utils/input/_input_update_plateforms.php");
     ?>
     <!-- input description -->
     <div class="mt-5">
@@ -68,7 +68,7 @@ ob_start()
     </div>
     <!-- select for PEGI -->
     <?php
-    include_once("input/_input_update_pegi.php");
+    include_once("utils/input/_input_update_pegi.php");
     ?>
     <!-- id input -->
     <input type="hidden" name="id" value="<?= $game['id'] ?>">
@@ -79,4 +79,4 @@ ob_start()
   </form>
 </section>
 <?php $content = ob_get_clean(); ?>
-<?php require('layout.php') ?>
+<?php require('layout/layout.php') ?>

@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-require_once("src/models/User.php");
+require_once("models/User.php");
 require_once('Controller.php');
 
 class User extends Controller
@@ -22,7 +22,7 @@ class User extends Controller
   {
     $title = "Users"; // title for current page
     $users = $this->model->getAll("pseudo");
-    require("templates/userpage.php");
+    require("views/userpage.php");
   }
   /**
    * Show single item
@@ -35,6 +35,6 @@ class User extends Controller
     $user = $this->model->get($id);
     $title = $user["pseudo"];
     //  affichage
-    require("templates/showOneUser.php");
+    require("views/showOneUser.php");
   }
 }

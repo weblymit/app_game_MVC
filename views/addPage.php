@@ -5,4 +5,4 @@ $error = [];
 ob_start();
 require('partials/_addGameContent.php');
 $content = ob_get_clean();
-require('layout.php');
+require('layout/layout.php');

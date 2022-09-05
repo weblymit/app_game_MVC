@@ -4,7 +4,7 @@ namespace Models;
 
 use PDO;
 
-require_once("src/database.php");
+require_once("utils/database.php");
 
 abstract class Model
 {
@@ -90,6 +90,4 @@ abstract class Model
     // $game = getGame($id);
     return $id;
   }
-
-  
 }

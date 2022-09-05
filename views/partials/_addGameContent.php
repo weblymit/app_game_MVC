@@ -35,7 +35,7 @@
     </div>
     <!-- input for genre -->
     <?php
-    include_once("input/_input_genre.php");
+    include_once("utils/nput/_input_genre.php");
     ?>
     <!-- input for note -->
     <div class="mb-3">
@@ -54,7 +54,7 @@
     </div>
     <!-- input for plateforms -->
     <?php
-    include_once("input/_input_plateforms.php");
+    include_once("utils/input/_input_plateforms.php");
     ?>
     <!-- input description -->
     <div class="mt-5">
@@ -72,7 +72,7 @@
     </div>
     <!-- select for PEGI -->
     <?php
-    include_once("input/_input_pegi.php");
+    include_once("utils/input/_input_pegi.php");
     ?>
     <!-- submit btn -->
     <div class="mt-4">
